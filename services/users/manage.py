@@ -1,8 +1,3 @@
-# services/users/manage.py
-
-
-import sys
-
 from flask.cli import FlaskGroup
 
 from project import create_app, db
