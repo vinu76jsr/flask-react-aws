@@ -4,6 +4,7 @@ env:
   variables:
     AWS_REGION: "us-west-1"
     REACT_APP_USERS_SERVICE_URL: "http://localhost:5001"
+    AWS_ACCOUNT_ID: "759791387030"
 
 phases:
   install:
@@ -12,7 +13,7 @@ phases:
   pre_build:
     commands:
       - echo logging in to ecr...
-      - $(aws ecr get-login-password --region $AWS_REGION)
+      - $(aws ecr get-login --region $AWS_REGION)
   build:
     commands:
       - echo building images...
