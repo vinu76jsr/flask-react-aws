@@ -13,7 +13,7 @@ phases:
   pre_build:
     commands:
       - echo logging in to ecr...
-      - $(aws ecr get-login --region $AWS_REGION)
+      - $(aws ecr get-login --region $AWS_REGION --no-include-email)
   build:
     commands:
       - echo building images...
